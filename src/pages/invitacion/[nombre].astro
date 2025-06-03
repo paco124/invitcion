@@ -1,0 +1,99 @@
+---
+// src/pages/invitacion/[nombre].astro
+import invitados from '../../components/invitados.json';
+import CongratulationsComponent from '../../components/congratulations.astro';
+import CountDownComponent from '../../components/countdown.astro';
+import PhraseComponent from '../../components/phrase.astro';
+import TicketComponent from '../../components/ticket.astro';
+import MapComponent from '../../components/map.astro';
+
+export async function getStaticPaths() {
+  return invitados.map((invitado) => ({
+    params: { nombre: encodeURIComponent(invitado.nombre.replace(/\s+/g, '-').toLowerCase()) },
+    props: invitado
+  }));
+}
+
+const { nombre, mesa, personas } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<title>Invitación para {nombre}</title>
+	</head>
+	<body style="display: block; background-color: black;">
+		<CongratulationsComponent />
+		<CountDownComponent />
+		<PhraseComponent />
+		<MapComponent />
+		<TicketComponent nombre={nombre} mesa={mesa} personas={personas} />
+	</body>
+</html>
+
+<style>
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+	}
+	@font-face {
+		font-family: 'Dancing Script';
+		src: url('/fonts/Dancing_Script/static/DancingScript-Regular.ttf') format('truetype');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+</style>
+
+
+
+
+
+<!-- ---
+import CongratulationsComponent from '../components/congratulations.astro';
+import CountDownComponent from '../components/countdown.astro';
+import PhraseComponent from '../components/phrase.astro';
+import TicketComponent from '../components/ticket.astro';
+import MapComponent from '../components/map.astro';
+---
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro Basics</title>
+	</head>
+	<body style="display: block; background-color: black;">
+
+		<CongratulationsComponent />
+		<CountDownComponent />
+		<PhraseComponent />
+		<MapComponent />
+		<TicketComponent />
+		<br>
+
+	</body>
+</html>
+
+<style>
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+	}
+	@font-face {
+		font-family: 'Dancing Script';
+		src: url('/fonts/Dancing_Script/static/DancingScript-Regular.ttf') format('truetype');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+</style> -->

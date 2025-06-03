@@ -1,0 +1,83 @@
+
+<style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Dancing Script', cursive;
+    }
+  
+    body, html {
+      width: 100%;
+      height: 100%;
+    }
+    
+    .container{
+      position: relative;
+    }
+    .container img {
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+      object-fit: contain;
+      opacity: 0.3;
+    }
+  
+    .contenido-central{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+      z-index: 10;
+    } 
+  
+    .phrase {
+      font-size: clamp(1rem, 5vw, 4rem);
+      color: #ffffffcc;
+      line-height: 1.5;
+    }
+
+    .photo{
+      padding: 5% 20%;
+    }
+
+    .photo img{
+      width: 100%;
+      max-width: 100%;
+      object-fit: contain;
+      border: 5px solid white;
+    }
+
+    .photo img:hover {
+      transform: scale(1.02);
+      transition: transform 0.3s ease;
+    }
+
+
+
+</style>
+  
+<div class="photo">
+  <img src="/images/uane.jpeg" alt="">
+</div>
+<div class="container">
+    <img src="/images/foto-2.jpeg"/>
+    <div class="contenido-central">
+        <div class="phrase">
+          Después de tanto esfuerzo, estudio y sueños... ha llegado el momento de celebrar. 
+          Me encantaría que me acompañaras en este día tan especial: mi graduación.
+        </div>
+    </div>
+</div>
+
+  <!-- <div class="image">
+    <div class="contenido-central">
+      <div class="phrase">
+        Después de tanto esfuerzo, estudio y sueños... ha llegado el momento de celebrar. 
+        Me encantaría que me acompañaras en este día tan especial: mi graduación.
+      </div>
+    </div>
+  </div> -->
+  

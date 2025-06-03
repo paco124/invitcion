@@ -1,0 +1,175 @@
+---
+---
+<style>
+  * {
+    font-family: 'Dancing Script', cursive;
+  }
+
+  body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .recepcion {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .overlay-content {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    text-align: center;
+    z-index: 2;
+    color: white;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .texto {
+    max-width: 50%;
+    margin-bottom: 20px;
+  }
+
+  .overlay-content a {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    background: #AA2257;
+    padding: 10px 20px;
+    border-radius: 20px;
+  }
+
+  .overlay-content a:hover {
+    transform: scale(1.05);
+  }
+
+  .confirm-button {
+    padding: 20px 40px;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .confirm-button:hover {
+    transform: scale(1.05);
+    background-color: #AA2257;
+    color: white;
+    box-shadow: 0 10px 20px #AA2257;
+  }
+
+  .confirm-button:active {
+    transform: scale(0.98);
+  }
+
+  .info-section {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20%;
+  }
+
+  .left-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .right-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+  }
+
+  .dress-code-text {
+    font-size: 1.5rem;
+    color: black;
+    margin-bottom: 10px;
+  }
+
+  .dress-code-text2 {
+    font-size: 1rem;
+    color: black;
+    margin-bottom: 2px;
+    text-align: center;
+  }
+
+  .dress-code-img {
+    width: 70%;
+    height: auto;
+  }
+
+  .icons-container {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    align-items center;
+    margin-top: 10px;
+  }
+
+  .icons-container img {
+    width: 60px;
+    height: auto;
+  }
+</style>
+
+<div class="container">
+  <img class="recepcion" src="/images/recepcion.svg" alt="Recepción" />
+  <div class="overlay-content">
+    <img class="texto" src="/images/texto.svg" alt="Texto decorativo" />
+    <a href="https://www.google.com/maps?q=25.388700,-100.941910" target="_blank">
+      Ver ubicación
+    </a>
+    <!-- <button class="confirm-button">Confirmar asistencia</button> -->
+
+    <div class="info-section">
+      <!-- Izquierda: Dress Code -->
+      <div class="left-column">
+        <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+          <div class="dress-code-text">Dress Code:</div>
+          <div class="dress-code-text">All Black</div>
+          <img class="dress-code-img" src="/images/dress-code.svg" alt="Dress Code" />
+        </div>
+      </div>
+
+      <!-- Derecha: Regalo -->
+      <div class="right-column">
+        <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+          <div class="dress-code-text2">Regalo obligatorio:</div>
+          <div class="dress-code-text2" style="color:#AA2257">tu presencia</div>
+          <div class="dress-code-text2">Pero si quieres regalar algo</div>
+          <div class="dress-code-text2">te damos estas opciones</div>
+
+        </div>
+        <div class="icons-container">
+          <img src="/images/gitf.svg" alt="Gift" />
+          <img src="/images/envelope.svg" alt="Envelope" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
