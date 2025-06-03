@@ -1,9 +1,11 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import netlify from '@astrojs/netlify'; // 👈 agrega esta línea
 
 // https://astro.build/config
 export default defineConfig({
-    devToolbar: {
-      enabled: false
-    }
-  });
+  adapter: netlify(), // 👈 agrega esta línea
+  devToolbar: {
+    enabled: false
+  }
+});
