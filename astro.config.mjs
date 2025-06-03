@@ -8,4 +8,7 @@ export default defineConfig({
     edgeMiddleware: false,
     functionPerRoute: false
   }),
+  devToolbar: {
+    enabled: false
+  }
 });
