@@ -1,4 +1,4 @@
-{ "nombre": "Abraham Rios", "personas": 1, "mesa": 9 },
+[{ "nombre": "Abraham Rios", "personas": 1, "mesa": 9 },
   { "nombre": "Adriana Padilla", "personas": 1, "mesa": 8 },
   { "nombre": "Alejandra Cardenas", "personas": 1, "mesa": 8 },
   { "nombre": "Alexandra Tobias y novio", "personas": 2, "mesa": 10 },
@@ -64,4 +64,4 @@
   { "nombre": "Victor Hernandez", "personas": 1, "mesa": 1 },
   { "nombre": "Dana", "personas": 1, "mesa": 4 },
   { "nombre": "Joel de Leon", "personas": 1, "mesa": 6 }
-
+]
