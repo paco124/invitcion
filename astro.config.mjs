@@ -1,11 +1,11 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
-import netlify from '@astrojs/netlify'; // 👈 agrega esta línea
+import netlify from "@astrojs/netlify";
 
-// https://astro.build/config
 export default defineConfig({
-  adapter: netlify(), // 👈 agrega esta línea
-  devToolbar: {
-    enabled: false
-  }
+  output: "static", // <-- esto es importante
+  adapter: netlify({
+    // si no usas SSR, no actives funciones
+    edgeMiddleware: false,
+    functionPerRoute: false
+  }),
 });
